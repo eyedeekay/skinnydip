@@ -1,0 +1,19 @@
+#! /usr/bin/env sh
+
+if [ -f /etc/skinnydip.conf ]; then
+    . /etc/skinnydip.conf
+fi
+
+
+if [ -f "$HOME/.config/skinnydip.conf" ]; then
+    . "$HOME/.config/skinnydip.conf"
+fi
+
+if [ -z $1 ]; then
+    if [ -f /usr/lib/skinnydip/$1 ]; then
+        /usr/lib/skinnydip/$@
+    fi
+fi
+
+
+
