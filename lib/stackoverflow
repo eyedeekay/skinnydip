@@ -4,9 +4,9 @@ if [ -f /etc/gpm.conf ]; then
     . /etc/gpm.conf
 fi
 
-. <(gpm-emit reddit)
+. <(gpm-emit stackoverflow)
 GPM_name_field="name"
 GPM_pass_field="passwd"
-cookieget https://www.reddit.com/login
-"$GPM_user_bin_browser" "https://www.reddit.com/$@" &>/dev/null &
+cookieget https://www.stackoverflow.com/login
+"$GPM_user_bin_browser" "https://www.stackoverflow.com/$@" &>/dev/null &
 . <(gpm-c)

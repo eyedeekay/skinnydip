@@ -5,8 +5,8 @@ if [ -f /etc/gpm.conf ]; then
 fi
 
 . <(gpm-emit twitter)
-GPM_name_field="name"
-GPM_pass_field="passwd"
-cookieget https://www.twitter.com/login
+GPM_name_field="session[username_or_email]"
+GPM_pass_field="session[password]"
+cookieget -d "commit=Sign In"  https://www.twitter.com/sessions
 "$GPM_user_bin_browser" "https://www.twitter.com/$@" &>/dev/null &
 . <(gpm-c)

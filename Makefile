@@ -13,9 +13,10 @@ install:
 	ln -s -f /usr/lib/skinnydip/dockerhub /usr/lib/skinnydip/dh
 	install -m755 lib/facebook /usr/lib/skinnydip
 	ln -s -f /usr/lib/skinnydip/facebook /usr/lib/skinnydip/fb
+	install -m755 lib/github /usr/lib/skinnydip
+	ln -s -f /usr/lib/skinnydip/github /usr/lib/skinnydip/gh
 #	install -m755 lib/ /usr/lib/skinnydip
 #	ln -s -f /usr/lib/skinnydip/ /usr/lib/skinnydip/
-
 
 deb:
 	checkinstall --default \
@@ -27,5 +28,5 @@ deb:
 		--pkgversion=0.1 \
 		--pkglicense=gpl3 \
 		--pakdir=../ \
-		--requires="surfraw, surfraw-extra, gocryptfs-password-manager, gocryptfs, bash, secure-delete" \
+		--requires="gocryptfs-password-manager, gocryptfs, bash, secure-delete" \
 		--maintainer="problemsolver@openmailbox.org"

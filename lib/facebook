@@ -4,9 +4,9 @@ if [ -f /etc/gpm.conf ]; then
     . /etc/gpm.conf
 fi
 
-. <(gpm-emit reddit)
-GPM_name_field="name"
-GPM_pass_field="passwd"
-cookieget https://www.facebook.com/login
+. <(gpm-emit facebook)
+GPM_name_field="email"
+GPM_pass_field="pass"
+cookieget https://www.facebook.com/login.php
 "$GPM_user_bin_browser" "https://www.facebook.com/$@" &>/dev/null &
 . <(gpm-c)
