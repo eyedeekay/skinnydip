@@ -1,0 +1,12 @@
+#! /usr/bin/env bash
+
+if [ -f /etc/gpm.conf ]; then
+    . /etc/gpm.conf
+fi
+
+. <(gpm-emit reddit)
+GPM_name_field="name"
+GPM_pass_field="passwd"
+cookieget https://www.reddit.com/login
+"$GPM_user_bin_browser" "https://www.reddit.com/$@" &>/dev/null &
+. <(gpm-c)

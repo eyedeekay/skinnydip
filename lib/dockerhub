@@ -1,0 +1,12 @@
+#! /usr/bin/env bash
+
+if [ -f /etc/gpm.conf ]; then
+    . /etc/gpm.conf
+fi
+
+. <(gpm-emit dockerhub)
+GPM_name_field="name"
+GPM_pass_field="passwd"
+cookieget https://hub.docker.com/login
+"$GPM_user_bin_browser" "https://hub.docker.com/$@" &>/dev/null &
+. <(gpm-c)

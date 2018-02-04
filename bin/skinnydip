@@ -14,6 +14,3 @@ if [ -z $1 ]; then
         /usr/lib/skinnydip/$@
     fi
 fi
-
-
-
