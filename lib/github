@@ -1,4 +1,5 @@
 #! /usr/bin/env bash
+# Github(github.com) Easy hosted git
 
 . <(gpm-emit github)
 cookieget https://github.com/login

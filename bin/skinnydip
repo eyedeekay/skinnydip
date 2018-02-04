@@ -12,8 +12,8 @@ fi
 if [ ! -z $1 ]; then
     if [ "$1" = "-wapp" ]; then
         for f in $(find /usr/lib/skinnydip/ -type f); do
-            echo $f
-            head -n 2 $f | tail -n 1
+            echo $f | sed 's|/usr/lib/skinnydip|   |g'
+            head -n 2 $f | tail -n 1 | sed 's|# |     |g'
         done
     else
         if [ -f /usr/lib/skinnydip/$1 ]; then

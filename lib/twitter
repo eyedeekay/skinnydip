@@ -1,4 +1,5 @@
 #! /usr/bin/env bash
+# Twitter(twitter.com) Honestly I've never really understood it.
 
 if [ -f /etc/gpm.conf ]; then
     . /etc/gpm.conf

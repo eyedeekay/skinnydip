@@ -1,4 +1,5 @@
 #! /usr/bin/env bash
+# StackOverflow(stackoverflow.com) Expert help with code
 
 if [ -f /etc/gpm.conf ]; then
     . /etc/gpm.conf
