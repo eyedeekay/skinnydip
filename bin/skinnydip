@@ -9,8 +9,15 @@ if [ -f "$HOME/.config/skinnydip.conf" ]; then
     . "$HOME/.config/skinnydip.conf"
 fi
 
-if [ -z $1 ]; then
-    if [ -f /usr/lib/skinnydip/$1 ]; then
-        /usr/lib/skinnydip/$@
+if [ ! -z $1 ]; then
+    if [ "$1" = "-wapp" ]; then
+        for f in $(find /usr/lib/skinnydip/ -type f); do
+            echo $f
+            head -n 2 $f | tail -n 1
+        done
+    else
+        if [ -f /usr/lib/skinnydip/$1 ]; then
+            /usr/lib/skinnydip/$@
+        fi
     fi
 fi
