@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-# Facebook(facebook.com) Downfall of society
+# Facebook(facebook.com) Downfall of ssociety
 
 if [ -f /etc/gpm.conf ]; then
     . /etc/gpm.conf
