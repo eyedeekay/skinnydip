@@ -1,6 +1,10 @@
 #! /usr/bin/env bash
 # Github(github.com) Easy hosted git
 
+if [ -f /etc/gpm.conf ]; then
+    . /etc/gpm.conf
+fi
+
 . <(gpm-emit github)
 cookieget https://github.com/login
 "$GPM_user_bin_browser" https://github.com/ &>/dev/null &

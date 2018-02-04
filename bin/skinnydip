@@ -4,7 +4,6 @@ if [ -f /etc/skinnydip.conf ]; then
     . /etc/skinnydip.conf
 fi
 
-
 if [ -f "$HOME/.config/skinnydip.conf" ]; then
     . "$HOME/.config/skinnydip.conf"
 fi
